@@ -383,10 +383,11 @@ border-color: #d4d4d4 !important;}
 #formilla-chat-button{max-width: 1140px; position: relative; margin: 0 auto;}
 #formilla-chat-button-inner{right:50%!important; top: 0; margin-right: -570px; margin-top:59px;} 
 .logged-in #formilla-chat-button-inner{margin-top:92px;} 
+}
 #formilla-chat-button-inner{background-image: url(images/live.png) !important; background-repeat: no-repeat; 
 background-position: 15px 12px!important; padding: 0 0 0 15px!important;}
 #formilla-chat-button-text{padding: 9px 25px 0 27px!important;}
-}
+
 .fusion-main-menu{padding-right: 185px;}
 textarea {
   resize: none;
@@ -423,14 +424,14 @@ color:#fff; border-right:1px solid #0099d2; text-align:center;}
 
 
 /*IE CSS*/
-.ie .home-services .three_col .title, .safari .home-services .three_col .title{background:url(images/services-coner.png) no-repeat;}
+.ie .home-services .three_col .title, .windows.safari .home-services .three_col .title{background:url(images/services-coner.png) no-repeat;}
 
 
 /*safari*/
 
-.safari .home-services .fusion-layout-column.fusion-one-third{width:30.7% !important}
-.safari .about-hafen .fusion-layout-column.fusion-one-half {width: 48%!important;} 
-.safari .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after{top:7px;}
+.windows.safari .home-services .fusion-layout-column.fusion-one-third{width:30.7% !important}
+.windows.safari .about-hafen .fusion-layout-column.fusion-one-half {width: 48%!important;} 
+.windows.safari .wpml-ls-legacy-dropdown a.wpml-ls-item-toggle:after{top:7px;}
 
 .fusion-footer{font-weight: 300;}
 .fusion-footer ul li.current_page_item a{color:#fdd835 !important;}
@@ -447,26 +448,31 @@ color:#fff; border-right:1px solid #0099d2; text-align:center;}
 box-shadow:none !important;
 }
 .carousel-home .wonderplugincarousel .amazingcarousel-image{padding: 22px 0 !important;}
+
+@media only screen and (min-width: 1025px) and (max-width: 1920px) {
+
 .carousel-home .wonderplugincarousel, .carousel-home .amazingcarousel-list-container, .carousel-home .amazingcarousel-list-wrapper{
- max-width: inherit !important; width:100%!important;
+ max-width: inherit !important; width:100%!important;}
+
 }
+
 
 .carousel-home  .amazingcarousel-list{padding:10px 0 20px!important;}
 .ie #wonderplugincarousel-5 .amazingcarousel-nav{bottom: -20px!important;} 
-.safari .carousel-home .amazingcarousel-image-fix-wrapper img{height:auto!important;}
-.safari .what-we-do .fusion-layout-column.fusion-three-fourth{width:71.1%!important;}
-.safari .about-bottom .fusion-layout-column.fusion-column-last{width:46% !important;}
+.windows.safari .carousel-home .amazingcarousel-image-fix-wrapper img{height:auto!important;}
+.windows.safari .what-we-do .fusion-layout-column.fusion-three-fourth{width:71.1%!important;}
+.windows.safari .about-bottom .fusion-layout-column.fusion-column-last{width:46% !important;}
 .top-right-lang a.login-btn:hover, .top-right-lang a.login-btn:hover .fa-user{color:#fff; transition-duration: 0.2s;
 transition-property: color, background-color, border-color;  transition-timing-function: linear;}
-.safari .fusion-layout-column.sidebar-col{width: 21.1%!important;}    
-.safari .fusion-layout-column.doc-column{width: 62%!important;} 
-.safari .doc-column .wonderplugincarousel-container .amazingcarousel-image img{width:100px!important; height:100px!important;
+.windows.safari .fusion-layout-column.sidebar-col{width: 21.1%!important;}    
+.windows.safari .fusion-layout-column.doc-column{width: 62%!important;} 
+.windows.safari .doc-column .wonderplugincarousel-container .amazingcarousel-image img{width:100px!important; height:100px!important;
 margin:0 auto!important;}
 
-.safari .contact-bg .contact-column .title-heading-left, .ie .contact-bg .contact-column .title-heading-left{
+.windows.safari .contact-bg .contact-column .title-heading-left, .ie .contact-bg .contact-column .title-heading-left{
  background:url(images/cont-bg.png) no-repeat; width: 170px;}
-.safari .contact-bg .fusion-layout-column.fusion-one-third {width: 30.7%!important;} 
-.safari .questions-block .fusion-layout-column.content-right{width: 62%!important;} 
+.windows.safari .contact-bg .fusion-layout-column.fusion-one-third {width: 30.7%!important;} 
+.windows.safari .questions-block .fusion-layout-column.content-right{width: 62%!important;} 
 .ie .location-recipient:after{top:11px;}
 .ie .wpcf7-select{width:100%; padding-right:0!important;} 
 .ie .wpcf7-select-parent .wpcf7-select{padding-right:0!important;} 
@@ -474,20 +480,65 @@ margin:0 auto!important;}
 #schedule-form .modal-header{min-height: 0!important;}
 #schedule-form h2{font-size:30px; color:#231f20; font-weight: 400; margin-bottom: 0;}
 
+.desktop-none{display: none!important;}
+
+
+/*Ipad*/
+
+@media only screen and (min-width: 768px) and (max-width: 800px) {
+.fusion-footer .fusion-columns .fusion-column{float: left!important;  width: 50%!important;}
+.fusion-main-menu{padding-right:0px!important;} 
+.what-we-do .fusion-body .fusion-layout-column{ width: 33.3333%!important;}
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ 
+.fusion-logo{max-width: 150px;} 
+.fusion-main-menu{padding-right: 145px;} 
+.fusion-main-menu {margin-top: 50px;} 
+.top-header-language{position: absolute;}
+.top-header-language .top-right-lang{padding-right: 20px; max-width: 270px;} 
+.sub-header ul li a i{ margin-right: 10px; padding: 0 15px;  background-size: 18px auto;}
+.sub-header ul li a{font-size: 12px; text-transform: capitalize;}
+.sub-header ul li{margin-right: 1%; width: 24%;}
+.fusion-main-menu > ul > li > a, .side-nav li a{font-size:15px;}
+.home-services .three_col .title h3{font-size: 15px;} 
+.about-hafen p{font-size:17px;}
+.home-services .fusion-layout-column.fusion-one-third{ width: 30.6666%!important; float: left; margin-right: 4%!important;}
+.fusion-header .fusion-mobile-menu-icons{top:38px!important;}
+.home-services .fusion-layout-column.fusion-column-last{ margin-right: 0!important;}
+.about-hafen .fusion-layout-column.fusion-one-half{width: 48%!important; float: left; margin-right: 4%!important;}
+.about-hafen .fusion-layout-column.fusion-column-last{ margin-right: 0!important;}
+#three-images .bottom-block{width: 32%!important; float: left; margin-right: 4px!important;}
+#three-images .title-heading-center{font-size: 25px!important;}
+.top-header-language .container{overflow: hidden!important;}
+#formilla-chat-button-inner{margin-right: 0; right:15px!important; margin-top: 51px;}
+.fusion-main-menu > ul > li > a, .side-nav li a{font-size:14px!important;}
+#formilla-chat-button-text{padding: 9px 16px 0 25px!important; font-size: 14px!important;}
+#formilla-chat-button-inner{height: 32px!important; line-height: 15px!important; background-position: 11px 10px!important;}
+}
+
+
+
+
+
 
 /*Mobile*/
 
 @media (max-width:767px) { 
+ 
+ /*Header*/
 
-.top-header-language{margin-bottom: 30px; position: static;}
+.top-header-language{margin-bottom: 25px; position: static;}
 .top-header-language .top-right-lang{width:100%; background: #fdd835; max-width: 100%; padding-left: 15px; padding-right: 15px;}
 .top-right-lang #icl_lang_sel_widget-2{width: 40%;}
 .fusion-logo{float: none;  text-align: center;}
 .fusion-logo img{max-width: 160px;}
 .sub-header ul li a i{margin-right:0;  padding: 8px 10px; margin-bottom: 10px; border-radius: 4px 4px 0 0;  display: block;
- background-size: 19px;}
+ background-size: 19px; margin-left: -5px;   margin-right: -5px;}
+ 
 .sub-header ul li a{line-height: normal; font-size: 12px; text-transform: capitalize;  display: block;  padding-bottom: 10px;
- text-align: center;}
+ text-align: center; padding-left: 5px; padding-right: 5px;}
+ 
 .container{width: inherit !important;}
 .home .tfs-slider .slide-content-container .heading, .home .tfs-slider .slide-content-container .caption,
 .home .tfs-slider .slide-content-container .heading{ max-width: 100%!important; text-align: center!important;} 
@@ -501,5 +552,70 @@ margin:0 auto!important;}
 .separator-title h4.title-heading-left{text-align: center!important;} 
 .separator-title:after{left:50%; margin-left: -50px;}
 .about-hafen{padding-top:40px!important;}
-.bottom-block .fusion-body .fusion-layout-column{margin-bottom: 3px!important;}
+.bottom-block{margin-bottom: 3px!important;}
+
+/*Footer*/
+
+.fusion-footer-widget-area{text-align:center;}
+.fusion-footer h4.widget-title:after{left: 50%; margin-left: -25px;}
+.fusion-columns .fusion-column:not(.fusion-column-last){margin-bottom: 25px;}
+.fusion-copyright-notice{width:100%; float: none;   color:#dcdcdc;}
+.fusion-footer-widget-area{padding-bottom: 0!important;}
+.fusion-social-links-footer{text-align: center!important;}
+.fusion-social-links-footer{width:100%!important; }
+.fusion-social-links-footer .fusion-social-networks{display: block!important;}
+.fusion-copyright-notice{padding-top: 15px!important; margin-bottom: 15px; border-bottom:1px solid #464646;}
+.fusion-header{padding:20px 20px 0!important;}
+.fusion-mobile-nav-holder{padding-top: 0!important;}
+.fusion-open-submenu:hover{color:#fdd835 !important;}
+.home-services .fusion-imageframe{display:block;}
+.home-services .fusion-imageframe img{width:100%;} 
+.bottom-block{text-align: center;}
+.fusion-breadcrumbs {padding: 5px 0;}
+.center-content p{font-size:16px; line-height: normal;}
+.features-about{background:#f1f1f1!important}
+.desktop-none{display: block!important;}
+.features-about{padding:0!important;}
+.features-about .fusion-imageframe img{width:100%;}
+.about-feat-block ul{float: none;  max-width: 100%; padding: 25px 20px; background: url(images/left-shadow.jpg) no-repeat left top; }
+.about-feat-block ul li{margin-left: 1px; left:0!important; margin-top:0!important;}
+.about-feat-block ul li{background-size:100% 100%; line-height: 34px; font-size: 17px;  padding: 23px 12px 0;}
+.about-feat-block .alignleft{margin-right: 10px;}
+.what-we-do{margin-top:0!important; text-align: center;}
+#content .what-we-do h1.title-heading-left, #content .about-bottom h1.title-heading-left{text-align: center;}
+.what-we-do .center-content, .what-we-do .center-content p{ text-align: center;}
+#content .what-we-do .fusion-layout-column{max-width: 270px; margin: 20px auto!important; float: none;}
+#content .features-about{margin-bottom: 20px!important;}
+.about-bottom{font-size:16px; text-align:center;}
+#content .about-bottom .moblie-pad-o .fusion-column-wrapper{padding: 0 20px!important;}
+#content .about-bottom{padding:0!important; background:url(images/hafen-bg.jpg) no-repeat 0 0 !important; background-size:cover!important; }
+.about-bottom .fusion-imageframe img{width:100%;}
+
 }
+
+@media (max-width:480px) {
+ 
+ /*Home Slider*/
+
+.flexslider .slides li .background.background-image{height:400px !important;}
+.fusion-slider-container{height:400px !important; min-height: 400px!important}
+
+
+.home .flexslider .slides li .background.background-image{height:425px !important;}
+.home .fusion-slider-container{height:425px !important; min-height: 425px!important}
+.home .flexslider .slides li:first-child .background.background-image{background-image: url(images/slider-mobile-1.png)!important;}
+.home .tfs-slider .slide-content-container{top:25%!important;}
+.home .slide-content-container{padding-left: 10px!important; padding-right: 10px!important;}
+.btn-orange{font-size: 14px; padding: 5px 20px; font-weight: 500;} 
+.home .flexslider .slides li:nth-child(2) .background.background-image{background-image: url(images/slider-mobile-2.png)!important;}
+.home .flexslider .slides li:last-child .background.background-image{background-image: url(images/slider-mobile-3.jpg)!important;} 
+.page-about-us .flexslider .slides .background.background-image{background-image: url(images/aboutus-mobile.jpg)!important;}
+.caption  h3.title-heading-center{font-size:17px!important;  font-weight: normal!important; line-height: normal!important}
+
+
+}
+
+
+.fusion-mobile-menu-icons a{width:27px; height:19px; background:url(images/menu-mobile.png) no-repeat;} 
+.fusion-header .fusion-mobile-menu-icons{top:-38px; right: 10px;}
+.fusion-icon-bars:before{content:""!important;} 
