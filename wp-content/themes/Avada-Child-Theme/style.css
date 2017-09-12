@@ -343,9 +343,11 @@ border-radius:50%!important; display:block!important; margin-bottom: 3px;}
 .about-feat-block ul li.founded{left:-1px;} 
 
 .what-we-do .center-content, .what-we-do .center-content p{text-align: left;}
+
 .overlay-about{position: absolute; bottom: 0; left: 0; width: 100%; text-align: center; padding: 25px 20px; z-index: 100;
 color: #fff;  background: url(images/overlay.png) no-repeat; bottom: 0; font-size:16px; font-weight: 400; height: 110px;
  -webkit-transition: all 0.7s ease; transition: all 0.7s ease;} 
+ 
 .what-we-do .overlay-about h3{color:#fff; font-size:28px; text-transform: uppercase; font-family: 'Roboto', sans-serif; font-weight: bold;
 line-height: normal;  margin: 0; padding-bottom: 40px;}
 .what-we-do .three-col:hover .overlay-about{height:100%; padding-top: 150px;}
@@ -424,7 +426,9 @@ color:#fff; border-right:1px solid #0099d2; text-align:center;}
 
 
 /*IE CSS*/
-.ie .home-services .three_col .title, .windows.safari .home-services .three_col .title{background:url(images/services-coner.png) no-repeat;}
+.ie .home-services .three_col .title, .windows.safari .home-services .three_col .title,
+.ua-edge .home-services .three_col .title, .windows.safari .home-services .three_col .title
+{background:url(images/services-coner.png) no-repeat;}
 
 
 /*safari*/
@@ -469,11 +473,14 @@ transition-property: color, background-color, border-color;  transition-timing-f
 .windows.safari .doc-column .wonderplugincarousel-container .amazingcarousel-image img{width:100px!important; height:100px!important;
 margin:0 auto!important;}
 
-.windows.safari .contact-bg .contact-column .title-heading-left, .ie .contact-bg .contact-column .title-heading-left{
+.windows.safari .contact-bg .contact-column .title-heading-left, 
+.ie .contact-bg .contact-column .title-heading-left,
+.ua-edge .contact-bg .contact-column .title-heading-left{
  background:url(images/cont-bg.png) no-repeat; width: 170px;}
 .windows.safari .contact-bg .fusion-layout-column.fusion-one-third {width: 30.7%!important;} 
 .windows.safari .questions-block .fusion-layout-column.content-right{width: 62%!important;} 
-.ie .location-recipient:after{top:11px;}
+
+.ie .location-recipient:after, .ua-edge .location-recipient:after{top:11px;}
 .ie .wpcf7-select{width:100%; padding-right:0!important;} 
 .ie .wpcf7-select-parent .wpcf7-select{padding-right:0!important;} 
 
@@ -488,10 +495,40 @@ margin:0 auto!important;}
 @media only screen and (min-width: 768px) and (max-width: 800px) {
 .fusion-footer .fusion-columns .fusion-column{float: left!important;  width: 50%!important;}
 .fusion-main-menu{padding-right:0px!important;} 
-.what-we-do .fusion-body .fusion-layout-column{ width: 33.3333%!important;}
+.fusion-layout-column.fusion-one-third.fusion-spacing-no{ width: 33.3333%!important;} 
+#main #content .contact-bg .fusion-one-third{margin-right: 4%!important; width: 30.6666%!important;}
+#main #content .contact-bg .fusion-one-third.fusion-column-last{margin-right: 0!important;}
+#main #content .questions-block .fusion-layout-column.fusion-one-third{margin-right: 4%!important; width: 30.6666%!important;}
+#main #content .questions-block .fusion-layout-column.content-right{width: 65.3333%!important;}
+.sidebar-col .block-heading{margin-bottom: 0!important}
+
+#content .testimonial_slider_set.testimonial_slider{padding-top: 20px;}
+#content .testimonial_by_wrap{width:100%!important; float: left; text-align: center;}
+#content .testimonial_quote{width:100%; float: left; text-align: center;}
+
+#content .testimonial_slideri, #content .testimonial_wrapper{height:100%!important;}
+#content .testimonial_slider_instance{height:100%!important; position: relative!important;}
+
+#content .testimonial_quote{background: #eff5f8!important;}
+#content .testimonial_by_wrap .testimonial_avatar{top:0;}
+#content .testimonial_by, #content .testimonial_site{position: static;}
+#content .testimonial_by, #content .testimonial_site{ background-color: #eff5f8!important;}
+#content .testimonial_quote{padding: 25px;}
+#content .testimonial_by{padding-top: 80px; padding-bottom: 13px; background-position: center 20px!important;}
+#content .testimonial_by_wrap .testimonial_avatar{margin-bottom: -4px;}
+#content .testimonial_nav{bottom: 0; top:auto; left:50%;  margin-left: -25px; width:50px;}
+#content .testimonial_nav a{display: inline-block!important;}
+#content .testimonial_slideri{padding-bottom: 40px;}
+.testimonial_slider__default .testimonial_slideri{padding-left:0!important; padding-right:0!important;}
+#content .rel-doc{padding:30px!important; background: url(images/gry-bg.jpg) !important;}
+#content .rel-doc .fusion-layout-column{margin-bottom: 0!important;}
 }
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
- 
+.what-we-do .overlay-about h3{font-size: 25px!important;}
+#content .about-bottom {background-position: right;} 
+.what-we-do .three-col:hover .overlay-about{padding-top: 100px;}
 .fusion-logo{max-width: 150px;} 
 .fusion-main-menu{padding-right: 145px;} 
 .fusion-main-menu {margin-top: 50px;} 
@@ -515,6 +552,11 @@ margin:0 auto!important;}
 .fusion-main-menu > ul > li > a, .side-nav li a{font-size:14px!important;}
 #formilla-chat-button-text{padding: 9px 16px 0 25px!important; font-size: 14px!important;}
 #formilla-chat-button-inner{height: 32px!important; line-height: 15px!important; background-position: 11px 10px!important;}
+.questions-block .man-image{position: static;}
+
+.schedules-table .table th{ padding: 8px 7px;  font-size: 13px;}
+.schedules-table .table td{padding: 8px 7px;  font-size: 13px;}
+#schedule-form .modal-lg{margin:0 auto;}
 }
 
 
@@ -590,15 +632,63 @@ margin:0 auto!important;}
 #content .about-bottom .moblie-pad-o .fusion-column-wrapper{padding: 0 20px!important;}
 #content .about-bottom{padding:0!important; background:url(images/hafen-bg.jpg) no-repeat 0 0 !important; background-size:cover!important; }
 .about-bottom .fusion-imageframe img{width:100%;}
+.content-right .wpcf7{width:100%;}
+.mobile-none{display: none!important;}
+.questions-block .wpcf7-submit{max-width: 100%!important;}
 
+/*Services Page*/
+
+.service-content p{text-align:center; font-size:16px;}
+.sidebar-col .block-heading{margin-bottom: 0!important}
+#content .rel-doc{padding:30px!important; background: url(images/gry-bg.jpg) !important;}
+#content .rel-doc .fusion-layout-column{margin-bottom: 0!important;}
+#content .testimonial_slider_set.testimonial_slider{padding-top: 20px;}
+#content .testimonial_by_wrap{width:100%!important; float: left; text-align: center;}
+#content .testimonial_quote{width:100%; float: left; text-align: center;}
+
+#content .testimonial_slideri, #content .testimonial_wrapper{height:100%!important;}
+#content .testimonial_slider_instance{height:100%!important; position: relative!important;}
+
+#content .testimonial_quote{background: #eff5f8!important;}
+#content .testimonial_by_wrap .testimonial_avatar{top:0;}
+#content .testimonial_by, #content .testimonial_site{position: static;}
+#content .testimonial_by, #content .testimonial_site{ background-color: #eff5f8!important;}
+#content .testimonial_quote{padding: 25px;}
+#content .testimonial_by{padding-top: 80px; padding-bottom: 13px; background-position: center 20px!important;}
+#content .testimonial_by_wrap .testimonial_avatar{margin-bottom: -4px;}
+#content .testimonial_nav{bottom: 0; top:auto; left:50%;  margin-left: -25px; width:50px;}
+#content .testimonial_nav a{display: inline-block!important;}
+#content .testimonial_slideri{padding-bottom: 40px;}
+.testimonial_slider__default .testimonial_slideri{padding-left:0!important; padding-right:0!important;}
+.separator-title h1{text-align:center!important;}
+
+/*Table*/
+
+.schedules-table table thead { border: none; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0;
+ position: absolute; width: 1px;}
+.schedules-table .table{border:0;}  
+.schedules-table table tr { display: block;}
+.schedules-table table td {border-bottom: 1px solid #ddd; display: block; text-align: right;}
+.schedules-table table td:before { content: attr(data-label);  float: left; font-weight: 500; text-transform: capitalize; width:60%; }
+.schedules-table table td:last-child { border-bottom: 1px solid #ddd; padding: 0;}
+.schedules-table .table td{border: 0; text-align: left;}
+.schedules-table .table .light-bg td{background-color: #fff}
+.schedules-table tr .mob-bg{background-color: #f7f7f7!important;}
+.book-now{ display: block; font-size: 16px; text-align: center; font-weight: 500; padding:8px 10px;}
+.schedules-table tr{margin-bottom: 20px; border:1px solid #d4d4d4; border-bottom: 0;}
+.page-view-schedule #content, .page-view-schedule #main{padding-bottom: 0; margin-bottom: 0;}
+.what-we-do .three-col:hover .overlay-about{padding-top: 100px;}
+.what-we-do .three-col .overlay-about{display: block; height:100%; padding-top: 100px;}
+.what-we-do .three-col .overlay-about h3, .what-we-do .three-col:hover .overlay-about h3 {padding-bottom: 10px;}
+span.wpcf7-not-valid-tip{margin-bottom: 10px; margin-top: -10px;}
 }
 
 @media (max-width:480px) {
  
  /*Home Slider*/
 
-.flexslider .slides li .background.background-image{height:400px !important;}
-.fusion-slider-container{height:400px !important; min-height: 400px!important}
+.flexslider .slides li .background.background-image{height:400px !important;  max-height: 400px!important;}
+.fusion-slider-container{height:400px !important; min-height: 400px!important; max-height: 400px!important;}
 
 
 .home .flexslider .slides li .background.background-image{height:425px !important;}
@@ -611,11 +701,43 @@ margin:0 auto!important;}
 .home .flexslider .slides li:last-child .background.background-image{background-image: url(images/slider-mobile-3.jpg)!important;} 
 .page-about-us .flexslider .slides .background.background-image{background-image: url(images/aboutus-mobile.jpg)!important;}
 .caption  h3.title-heading-center{font-size:17px!important;  font-weight: normal!important; line-height: normal!important}
+.page-contact-us .flexslider .slides .background.background-image{background-image: url(images/contactus-mobile.jpg)!important;}
+.slide-content .heading  h2.title-heading-center, .service-heading .title-heading-center, .separator-title h1{font-size:30px!important; 
+ line-height: normal!important;}
+.tfs-slider .background{overflow: visible!important}
+.page-air-freight .flexslider .slides .background.background-image{background-image: url(images/service-air-mobile.jpg)!important;}
+
+.page-ocean-freight .flexslider .slides .background.background-image{background-image: url(images/service-ocean-mobile.jpg)!important;}
+.page-oversized-projects .flexslider .slides .background.background-image{background-image: url(images/service-oversized-mobile.jpg)!important;}
+
+
+.separator-title h1{text-align:center!important;}
+.wrappingclass .modal-lg{max-width: 95%!important;}
+#content .rel-doc .service-heading h1.title-heading-center{font-size:26px!important;}
+
+#content .specialty-block .fusion-column-wrapper{background: url(images/air-sepc-m.jpg) no-repeat!important; min-height: 528px!important;
+padding: 40px 30px !important; background-size: 100% auto !important;} 
+
+.specialty-block ul li{background-position: left 11px; font-size: 16px; padding: 2px 0 2px 20px;}
+.page-ocean-freight #content  .specialty-block .fusion-column-wrapper{
+ background: url(images/specialty-ocean-mobile.jpg) no-repeat!important; background-size: 100% auto !important;}
+.page-oversized-projects #content  .specialty-block .fusion-column-wrapper{
+ background: url(images/sepcialty-overs-m.jpg) no-repeat!important; background-size: 100% auto !important;}
 
 
 }
 
+@media (max-width:320px) {
+#content .specialty-block .fusion-column-wrapper{min-height: 470px!important;} 
+}
 
 .fusion-mobile-menu-icons a{width:27px; height:19px; background:url(images/menu-mobile.png) no-repeat;} 
 .fusion-header .fusion-mobile-menu-icons{top:-38px; right: 10px;}
 .fusion-icon-bars:before{content:""!important;} 
+.page-faq #content{margin-bottom: 0;}
+
+
+/*Contact Us Page*/
+
+span.wpcf7-not-valid-tip{display: block!important; text-align: left; width: 100%;} 
+.wpcf7-form.invalid .wpcf7-not-valid{border-color:red!important;}

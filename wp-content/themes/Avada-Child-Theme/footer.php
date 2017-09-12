@@ -154,6 +154,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		   	  var field1 = jQuery(this).parent().siblings(":first").text(); 
 		   	  jQuery(".schedule-id").val(field1);
 		   	  jQuery("span.heading-form").text(field1);
+		   	  jQuery(".wpcf7-not-valid-tip").remove();
+		   	  jQuery(".wpcf7-response-output").empty();
+		   	  jQuery(".wpcf7-response-output").hide();
 		   	
 		   });
 			
