@@ -41,6 +41,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	echo Avada()->settings->get( 'space_head' ); // WPCS: XSS ok.
 	?>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500" rel="stylesheet"> 
+
+
+
 </head>
 
 <?php

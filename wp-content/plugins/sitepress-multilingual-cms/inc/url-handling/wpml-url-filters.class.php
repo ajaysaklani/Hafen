@@ -237,7 +237,7 @@ class WPML_URL_Filters {
 	}
 
 	public function home_url_filter( $url, $path, $orig_scheme, $blog_id ) {
-		if ( $this->debug_backtrace->is_function_in_call_stack( 'get_pagenum_link' ) ) {
+		if ( WPML_LANGUAGE_NEGOTIATION_TYPE_PARAMETER === $this->sitepress->get_setting( 'language_negotiation_type' ) && $this->debug_backtrace->is_function_in_call_stack( 'get_pagenum_link' ) ) {
 			return $url;
 		}
 

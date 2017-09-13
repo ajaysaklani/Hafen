@@ -100,7 +100,7 @@ function icl_st_init(){
 	if ( $setup_complete && $theme_localization_type->is_st_type() ) {
 	    /** @var WPML_ST_Gettext_Hooks $st_gettext_hooks */
 	    global $st_gettext_hooks;
-	    if ($st_gettext_hooks->should_gettext_filters_be_turned_on()) {
+	    if ( $st_gettext_hooks->should_gettext_filters_be_turned_on() ) {
 	        $st_gettext_hooks->init_gettext_hooks();
         }
 	}
@@ -662,7 +662,9 @@ function icl_sw_filters_gettext( $translation, $text, $domain, $name = false ) {
 		$name = md5( $text );
 	}
 
-    if ( $st_gettext_hooks->should_gettext_filters_be_turned_on() ) {$ret_translation = icl_translate( $domain, $name, $text, false, $has_translation );}
+    if ( $st_gettext_hooks->should_gettext_filters_be_turned_on() ) {
+	    $ret_translation = icl_translate( $domain, $name, $text, false, $has_translation );
+    }
 
 	if ( ! $has_translation ) {
 		$ret_translation = $translation;

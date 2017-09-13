@@ -873,7 +873,7 @@ class SitePress extends WPML_WPDB_User{
 		return $admin_language;
 	}
 
-	private function is_wpml_switch_language_triggered() {
+	public function is_wpml_switch_language_triggered() {
 		return isset( $GLOBALS['icl_language_switched'] ) ? true : false ;
 	}
 

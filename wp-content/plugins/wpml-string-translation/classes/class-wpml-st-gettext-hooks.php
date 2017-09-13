@@ -7,6 +7,9 @@ class WPML_ST_Gettext_Hooks {
 	/** @var string */
 	private $current_lang;
 
+	/** @var string */
+	private $initial_language;
+
 	/** @var bool */
 	private $all_strings_are_in_english;
 
@@ -20,10 +23,14 @@ class WPML_ST_Gettext_Hooks {
 		array( 'ngettext_with_context', 'icl_sw_filters_nxgettext', 9, 6 ),
 	);
 
+	private $sitepress;
+
 	/**
+	 * WPML_ST_Gettext_Hooks constructor.
+	 *
 	 * @param WPML_String_Translation $string_translation
 	 * @param string $current_lang
-	 * @param bool $all_strings_are_in_english
+	 * @param string $all_strings_are_in_english
 	 */
 	public function __construct(
 		WPML_String_Translation $string_translation,
@@ -31,7 +38,7 @@ class WPML_ST_Gettext_Hooks {
 		$all_strings_are_in_english
 	) {
 		$this->string_translation         = $string_translation;
-		$this->current_lang               = $current_lang;
+		$this->initial_language           = $this->current_lang = $current_lang;
 		$this->all_strings_are_in_english = $all_strings_are_in_english;
 	}
 
@@ -53,8 +60,10 @@ class WPML_ST_Gettext_Hooks {
 	public function switch_language_hook( $lang ) {
 		if ( $this->string_translation->should_use_admin_language() ) {
 			$this->current_lang = $this->string_translation->get_admin_language();
-		} else {
+		} elseif ( $lang ) {
 			$this->current_lang = $lang;
+		} else {
+			$this->current_lang = $this->initial_language;
 		}
 
 		if ( $this->should_gettext_filters_be_turned_on() ) {
@@ -76,9 +85,11 @@ class WPML_ST_Gettext_Hooks {
 	 * @return bool
 	 */
 	public function should_gettext_filters_be_turned_on( $lang = null ) {
+		global $sitepress_settings;
+
 		$lang = $lang ? $lang : $this->current_lang;
 
-		return 'en' !== $lang || ! $this->all_strings_are_in_english;
+		return ( 'en' !== $lang || ! $this->all_strings_are_in_english ) && isset( $sitepress_settings['setup_complete'] ) && $sitepress_settings['setup_complete'];
 	}
 
 	/**

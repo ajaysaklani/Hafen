@@ -173,5 +173,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		echo Avada()->settings->get( 'space_body' ); // WPCS: XSS ok.
 		?>
+		
+	
+		
 	</body>
 </html>

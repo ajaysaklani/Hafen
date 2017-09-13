@@ -2,10 +2,10 @@
 /*
 Plugin Name: WPML Multilingual CMS
 Plugin URI: https://wpml.org/
-Description: WPML Multilingual CMS | <a href="https://wpml.org">Documentation</a> | <a href="https://wpml.org/version/wpml-3-8-0/">WPML 3.8.0 release notes</a>
+Description: WPML Multilingual CMS | <a href="https://wpml.org">Documentation</a> | <a href="https://wpml.org/version/wpml-3-8-1/">WPML 3.8.1 release notes</a>
 Author: OnTheGoSystems
 Author URI: http://www.onthegosystems.com/
-Version: 3.8.0
+Version: 3.8.1
 Plugin Slug: sitepress-multilingual-cms
 */
 
@@ -16,7 +16,7 @@ if ( defined( 'ICL_SITEPRESS_VERSION' ) || ( (bool) get_option( '_wpml_inactive'
 		return;
 }
 
-define( 'ICL_SITEPRESS_VERSION', '3.8.0' );
+define( 'ICL_SITEPRESS_VERSION', '3.8.1' );
 
 // Do not uncomment the following line!
 // If you need to use this constant, use it in the wp-config.php file
@@ -165,12 +165,6 @@ if ( $sitepress->is_setup_complete() ) {
 
 $sitepress->load_core_tm();
 
-$tf_settings_read = new WPML_TF_Settings_Read();
-/** @var WPML_TF_Settings $tf_settings */
-$tf_settings = $tf_settings_read->get( 'WPML_TF_Settings' );
-$translation_feedback_module = new WPML_TF_Module( $action_filter_loader, $tf_settings );
-$translation_feedback_module->run();
-
 $wpml_wp_comments = new WPML_WP_Comments( $sitepress );
 $wpml_wp_comments->add_hooks();
 
@@ -189,6 +183,13 @@ $wpml_url_filters = new WPML_URL_Filters( $wpml_post_translations, $wpml_url_con
 wpml_load_request_handler( is_admin(),
                            $wpml_language_resolution->get_active_language_codes(),
                            $sitepress->get_default_language() );
+
+$tf_settings_read = new WPML_TF_Settings_Read();
+/** @var WPML_TF_Settings $tf_settings */
+$tf_settings = $tf_settings_read->get( 'WPML_TF_Settings' );
+$translation_feedback_module = new WPML_TF_Module( $action_filter_loader, $tf_settings );
+$translation_feedback_module->run();
+
 require WPML_PLUGIN_PATH . '/inc/url-handling/wpml-slug-filter.class.php';
 $wpml_slug_filter = new WPML_Slug_Filter( $wpdb, $sitepress, $wpml_post_translations );
 /** @var array $sitepress_settings */

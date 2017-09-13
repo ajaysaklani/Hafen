@@ -30,7 +30,7 @@ class WPML_ST_Gettext_Hooks_Factory {
 	}
 
 	public function get_current_language() {
-		if ( is_admin() && ! $this->is_ajax() ) {
+		if ( is_admin() && ! $this->is_ajax_request_coming_from_frontend() ) {
 			$current_lang = $this->sitepress->get_admin_language();
 		} else {
 			$current_lang = $this->sitepress->get_current_language();
@@ -48,5 +48,17 @@ class WPML_ST_Gettext_Hooks_Factory {
 
 	protected function is_ajax() {
 		return defined( 'DOING_AJAX' ) && DOING_AJAX;
+	}
+
+	private function is_ajax_request_coming_from_frontend() {
+		if ( ! $this->is_ajax() ) {
+			return false;
+		}
+
+		if ( ! isset( $_SERVER['HTTP_REFERER'] ) ) {
+			return false;
+		}
+
+		return false === strpos( $_SERVER['HTTP_REFERER'], admin_url() );
 	}
 }
