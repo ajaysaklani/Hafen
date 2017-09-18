@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php if ( ( Avada()->settings->get( 'footer_widgets' ) && 'no' !== $display_footer ) || ( ! Avada()->settings->get( 'footer_widgets' ) && 'yes' === $display_footer ) ) : ?>
 						<?php $footer_widget_area_center_class = ( Avada()->settings->get( 'footer_widgets_center_content' ) ) ? ' fusion-footer-widget-area-center' : ''; ?>
 
-						<footer role="contentinfo" class="fusion-footer-widget-area fusion-widget-area<?php echo esc_attr( $footer_widget_area_center_class ); ?>">
+						<footer class="fusion-footer-widget-area fusion-widget-area<?php echo esc_attr( $footer_widget_area_center_class ); ?>">
 							<div class="fusion-row">
 								<div class="fusion-columns fusion-columns-<?php echo esc_attr( Avada()->settings->get( 'footer_widgets_columns' ) ); ?> fusion-widget-area">
 									<?php
@@ -162,6 +162,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 			
 		});	
 	</script>
+	
+	<!--File upload-->
+	<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/uploadfile.css">
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.uploadfile.min.js"></script>
+	
+
+			<script type="text/javascript">
+	        jQuery(document).ready(function()
+	 {
+				jQuery("#previewupload").uploadFile({
+			    url:"https://hafen-dev-cyzerg.c9users.io/wp-content/themes/Avada-Child-Theme/php/upload.php",
+				fileName:"myfile",
+				acceptFiles:"image/*",
+				showPreview:true,
+				previewHeight: "100px",
+				previewWidth: "100px",
+				}); 
+			});	
+</script>
+	
+	
+	
 
 		<?php
 		/**
@@ -173,8 +195,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		echo Avada()->settings->get( 'space_body' ); // WPCS: XSS ok.
 		?>
-		
-	
 		
 	</body>
 </html>

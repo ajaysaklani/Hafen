@@ -63,3 +63,4 @@ function mv_browser_body_class($classes) {
         return $classes;
 }
 add_filter('body_class','mv_browser_body_class');
+

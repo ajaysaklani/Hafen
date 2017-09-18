@@ -211,23 +211,25 @@ height: 44px!important; padding-left: 35px; border-radius: 4px;}
 .fusion-copyright-notice{font-weight: 300;}
 .content-right .wpcf7{width:80%; margin: 0 auto;}
 .wpcf7-select{position: relative;}
+
 .your-fname:after, .your-lname:after, .location-recipient:after, .tel-644:after, .your-email:after, .your-message:after
-, .order-nub:after{color:#a1a1a1; top:-7px; position: absolute;  font-family: FontAwesome
-; font-size:15px; left: 13px; z-index: 10;}
+, .order-nub:after{color:#a1a1a1; top:0; position: absolute;  font-family: FontAwesome
+; font-size:15px; left: 13px; z-index: 10; margin-top:11px;}
+
 .your-fname:after, .your-lname:after{content: ""}
-.location-recipient:after{content: ""; top: -47px; }
-.gecko .location-recipient:after{content: ""; top: 25px; }
+.location-recipient:after{content: ""; top: 0 }
+.gecko .location-recipient:after{content: ""; top: 0; }
 .select-arrow{border:0!important; }
 .tel-644:after{content: "";}
 .your-email:after{content: "";}
-.your-message:after{content: ""; top: -57px;}
+.your-message:after{content: ""; top: 0;}
 .wpcf7-form textarea{padding-left: 35px;} 
 #main #comment-submit, #main .comment-submit, #reviews input#submit, .comment-form input[type="submit"], 
 .fusion-button-default-size, .fusion-portfolio-one .fusion-button, .post-password-form input[type="submit"],
 .ticket-selector-submit-btn[type="submit"], .tml-submit-wrap input[type="submit"], 
 .wpcf7-form input[type="submit"], .wpcf7-submit{font-size:19px  !important; color:#231f20  !important; font-weight: 500  !important; background-color: #fdd835 !important;
 padding:10px 20px !important; max-width: 266px; width:100%; font-family: 'Roboto', sans-serif  !important; line-height: normal!important;
-text-transform: capitalize!important; border-radius: 0!important;}}
+text-transform: capitalize!important; border-radius: 0!important;}
 
 #main #comment-submit:hover, #main .comment-submit:hover, #reviews input#submit:hover, .comment-form input[type="submit"]:hover, 
 .fusion-button-default-size:hover, .fusion-portfolio-one .fusion-button:hover, .post-password-form input[type="submit"]:hover,
@@ -280,7 +282,7 @@ font-family: 'Roboto', sans-serif; position: relative; padding-bottom: 15px!impo
 .sidebar-col .ask-qus .wpcf7-submit{font-size:17px !important; padding: 8px 20px !important; margin-top:4px;} 
 .sidebar-col .ask-qus .your-fname:after{top:-3px;}
 .sidebar-col .ask-qus textarea{height:110px;}
-.sidebar-col .ask-qus .your-message:after {top: -39px;}
+.sidebar-col .ask-qus .wpcf7-form br{display:none;}
 
 /*Related */
 .doc-column{background-color: rgba(255,255,255,0.9);}
@@ -370,10 +372,10 @@ line-height: normal;  margin: 0; padding-bottom: 40px;}
 .wrappingclass input.wpcf7-submit{max-width:100%!important; height: 100%!important; margin-top:0px !important;}
 
 .wrappingclass .your-fname:after, .wrappingclass .your-lname:after, .wrappingclass .tel-644::after, .wrappingclass .your-email:after{
-  top: -4px;} 
+  top: 0; margin-top: 8px;}  
 .wrappingclass .wpcf7-textarea{border-radius:4px; margin-bottom:10px !important; height: 110px !important;
 border-color: #d4d4d4 !important;}
-.wrappingclass .your-message:after{top: -38px;}
+.wrappingclass .your-message:after{top: 0; margin-top: 8px;}
 .wrappingclass .modal-header .close{width: 31px; height: 31px; border-radius: 50%; background:url(images/close.png) no-repeat;
  opacity: 1; text-indent: -9999px; display: block; top: -8px;  z-index: 10; position: absolute; right: -15px;}  
 .wrappingclass .modal-dialog{overflow: visible !important;}
@@ -501,27 +503,9 @@ margin:0 auto!important;}
 #main #content .questions-block .fusion-layout-column.fusion-one-third{margin-right: 4%!important; width: 30.6666%!important;}
 #main #content .questions-block .fusion-layout-column.content-right{width: 65.3333%!important;}
 .sidebar-col .block-heading{margin-bottom: 0!important}
-
-#content .testimonial_slider_set.testimonial_slider{padding-top: 20px;}
-#content .testimonial_by_wrap{width:100%!important; float: left; text-align: center;}
-#content .testimonial_quote{width:100%; float: left; text-align: center;}
-
-#content .testimonial_slideri, #content .testimonial_wrapper{height:100%!important;}
-#content .testimonial_slider_instance{height:100%!important; position: relative!important;}
-
-#content .testimonial_quote{background: #eff5f8!important;}
-#content .testimonial_by_wrap .testimonial_avatar{top:0;}
-#content .testimonial_by, #content .testimonial_site{position: static;}
-#content .testimonial_by, #content .testimonial_site{ background-color: #eff5f8!important;}
-#content .testimonial_quote{padding: 25px;}
-#content .testimonial_by{padding-top: 80px; padding-bottom: 13px; background-position: center 20px!important;}
-#content .testimonial_by_wrap .testimonial_avatar{margin-bottom: -4px;}
-#content .testimonial_nav{bottom: 0; top:auto; left:50%;  margin-left: -25px; width:50px;}
-#content .testimonial_nav a{display: inline-block!important;}
-#content .testimonial_slideri{padding-bottom: 40px;}
-.testimonial_slider__default .testimonial_slideri{padding-left:0!important; padding-right:0!important;}
 #content .rel-doc{padding:30px!important; background: url(images/gry-bg.jpg) !important;}
-#content .rel-doc .fusion-layout-column{margin-bottom: 0!important;}
+#content .rel-doc .fusion-layout-column{margin-bottom: 0!important;}  
+
 }
 
 
@@ -547,7 +531,7 @@ margin:0 auto!important;}
 .about-hafen .fusion-layout-column.fusion-column-last{ margin-right: 0!important;}
 #three-images .bottom-block{width: 32%!important; float: left; margin-right: 4px!important;}
 #three-images .title-heading-center{font-size: 25px!important;}
-.fusion-header-wrapper{overflow: hidden!important;}
+#wrapper{overflow: hidden!important;}
 #formilla-chat-button-inner{margin-right: 0; right:15px!important; margin-top: 51px;}
 .fusion-main-menu > ul > li > a, .side-nav li a{font-size:14px!important;}
 #formilla-chat-button-text{padding: 9px 16px 0 25px!important; font-size: 14px!important;}
@@ -557,6 +541,27 @@ margin:0 auto!important;}
 .schedules-table .table th{ padding: 8px 7px;  font-size: 13px;}
 .schedules-table .table td{padding: 8px 7px;  font-size: 13px;}
 #schedule-form .modal-lg {margin: 50px auto 0;}
+.wrappingclass .modal-lg{max-width: 90%!important; margin-left:auto; margin-right:auto;}
+
+#content .testimonial_slider_set.testimonial_slider{padding-top: 20px;}
+#content .testimonial_by_wrap{width:100%!important; float: left; text-align: center;}
+#content .testimonial_quote{width:100%; float: left; text-align: center;}
+
+#content .testimonial_slideri, #content .testimonial_wrapper{height:100%!important;}
+#content .testimonial_slider_instance{height:100%!important; position: relative!important;}
+
+#content .testimonial_quote{background: #eff5f8!important;}
+#content .testimonial_by_wrap .testimonial_avatar{top:0;}
+#content .testimonial_by, #content .testimonial_site{position: static;}
+#content .testimonial_by, #content .testimonial_site{ background-color: #eff5f8!important;}
+#content .testimonial_quote{padding: 25px;}
+#content .testimonial_by{padding-top: 80px; padding-bottom: 13px; background-position: center 20px!important;}
+#content .testimonial_by_wrap .testimonial_avatar{margin-bottom: -4px;}
+#content .testimonial_nav{bottom: 0; top:auto; left:50%;  margin-left: -25px; width:50px;}
+#content .testimonial_nav a{display: inline-block!important;}
+#content .testimonial_slideri{padding-bottom: 40px;}
+.testimonial_slider__default .testimonial_slideri{padding-left:0!important; padding-right:0!important;}
+
 }
 
 
@@ -681,11 +686,11 @@ margin:0 auto!important;}
 .what-we-do .three-col .overlay-about{display: block; height:100%; padding-top: 100px;}
 .what-we-do .three-col .overlay-about h3, .what-we-do .three-col:hover .overlay-about h3 {padding-bottom: 10px;}
 span.wpcf7-not-valid-tip{margin-bottom: 10px; margin-top: -10px;}
-.wpcf7-form.invalid .location-recipient:after{top: -68px;}
 
 .wpcf7-form.invalid .your-fname:after, .wpcf7-form.invalid .your-lname:after, .wpcf7-form.invalid .your-email:after, 
-.wpcf7-form.invalid .order-nub:after{
- top:-68px;}
+.wpcf7-form.invalid .order-nub:after{ margin-top:10px;
+ }
+ 
 .contact-bg .contact-column{ float: none!important;  margin: 0 auto 20px!important;  max-width: 360px;  width: 100%!important;}
 .fusion-footer-widget-area .widget .recentcomments::before, .fusion-footer-widget-area .widget_archive li a::before,
 .fusion-footer-widget-area .widget_categories li a::before, .fusion-footer-widget-area .widget_links li a::before, 
@@ -702,6 +707,13 @@ span.wpcf7-not-valid-tip{margin-bottom: 10px; margin-top: -10px;}
  top:-65px; left:-102px;}*/
 
 .fusion-logo a{display: inline-block;}
+
+
+.wpcf7-form .your-fname:after, 
+.wpcf7-form .your-lname:after, .wpcf7-form .your-email:after, 
+.wpcf7-form .order-nub:after, .your-message:after, .tel-644::after{top:0!important; margin-top:10px!important;}
+
+.wrappingclass .modal-lg{max-width: 90%!important; margin-left:auto; margin-right:auto;}
 
 }
 
@@ -734,7 +746,7 @@ span.wpcf7-not-valid-tip{margin-bottom: 10px; margin-top: -10px;}
 
 
 .separator-title h1{text-align:center!important;}
-.wrappingclass .modal-lg{max-width: 95%!important;}
+.wrappingclass .modal-lg{max-width: 90%!important; margin-left:auto; margin-right:auto;}
 #content .rel-doc .service-heading h1.title-heading-center{font-size:26px!important;}
 
 #content .specialty-block .fusion-column-wrapper{background: url(images/air-sepc-m.jpg) no-repeat!important; min-height: 528px!important;
@@ -775,6 +787,6 @@ padding: 40px 30px !important; background-size: 100% auto !important;}
 
 span.wpcf7-not-valid-tip{display: block!important; text-align: left; width: 100%;} 
 .contact-bg .contact-column ul li a{color: #231f20;}
-
+.wpcf7-form-control-wrap{width:100%; display: block;}
 
 

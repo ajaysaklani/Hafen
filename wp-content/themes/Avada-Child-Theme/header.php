@@ -235,5 +235,5 @@ if ( 'modern' === Avada()->settings->get( 'mobile_menu_design' ) ) {
 		}
 		do_action( 'avada_before_main_container' );
 		?>
-		<main id="main" role="main" class="clearfix <?php echo esc_attr( $main_class ); ?>" style="<?php echo esc_attr( $main_css ); ?>">
+		<main id="main" class="clearfix <?php echo esc_attr( $main_class ); ?>" style="<?php echo esc_attr( $main_css ); ?>">
 			<div class="fusion-row" style="<?php echo esc_attr( $row_css ); ?>">
