@@ -1659,11 +1659,8 @@ function avada_dynamic_css_array( $original_css = array() ) {
 	 * Portfolio Styling Options
 	 */
 
-	// Portfolio Text Alignment / portfolio_text_alignment.
-	$elements = array(
-		'.fusion-portfolio-content-wrapper .fusion-portfolio-content'
-	);
-	$css['global'][ $dynamic_css_helpers->implode( $elements ) ]['text-align'] = Avada()->settings->get( 'portfolio_text_alignment' );
+	// Portfolio Archive Text Alignment / portfolio_archive_text_alignment.
+	$css['global']['.fusion-portfolio-content-wrapper .fusion-portfolio-content']['text-align'] = Avada()->settings->get( 'portfolio_archive_text_alignment' );
 
 	// Portfolio Text Layout Padding / portfolio_layout_padding.
 	$elements = array(
